@@ -1,0 +1,51 @@
+{% extends 'bojanka/layout.html' %}
+{% load static %}
+
+{% block body %}
+
+<h1 id="naslov">Zabava sa zastavama</h1>
+<h2 id="vrijeme">Vrijeme: </h2>
+<h2 id="rekord">Rekord: </h2>
+<div class="lista">
+    <ul></ul>
+</div>
+<div class="container">
+    <div class="vanjska">
+        <h2 id="ime"></h2>
+        <div class="zastava">
+            <div class="pruga" id="first"></div>
+            <div class="pruga" id="second"></div>
+            <div class="pruga" id="third"></div>
+        </div>
+    </div>
+    <div class="chooser">
+        <form action="" id="type_chooser">
+            <p>Odaberi oblik zastave</p>
+            <input class="radio" type="radio" name="vrsta" id="prazna" value="prazna">
+            <label for="prazna">Bez pruga</label><br>
+            <input class="radio" type="radio" name="vrsta" id="horizontalna" value="horizontalna">
+            <label for="horizontalna">Horizontalne pruge</label><br>
+            <input class="radio" type="radio" name="vrsta" id="vertikalna" value="vertikalna">
+            <label for="vertikalna">Vertikalne pruge</label>
+        </form>
+        <form action="" id="shape_chooser">
+            <label>Odaberi dio zastave</label>
+            <select name="shapes" id="shapes">
+                <option value=""></option>
+            </select>
+        </form>
+    </div>
+    <div class="buttons">
+        <button data-color="red" class="color"></button>
+        <button data-color="blue" class="color"></button>
+        <button data-color="green" class="color"></button>
+        <button data-color="white" class="color"></button>
+        <button data-color="yellow" class="color"></button>
+        <button data-color="black" class="color"></button>
+        <button data-color="orange" class="color"></button>
+        <button data-color="cyan" class="color"></button>
+        <button data-color="purple" class="color"></button>
+    </div>
+</div>
+
+{% endblock %}

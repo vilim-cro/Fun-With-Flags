@@ -1,0 +1,15 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ mydata|json_script:"mydata" }}
+    <script src="{% static 'bojanka/script.js' %}"></script>
+    <title>Zastave</title>
+    <link rel="stylesheet" href="{% static 'bojanka/style.css' %}">
+</head>
+<body>
+    {% block body %}
+    {% endblock %} 
+</body>
+</html>
